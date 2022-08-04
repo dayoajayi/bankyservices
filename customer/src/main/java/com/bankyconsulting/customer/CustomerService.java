@@ -27,9 +27,9 @@ public class CustomerService {
         /*
         * check if email valid
         * check if email not taken
-        * check if fraudster
+        * ~~check if fraudster~~
         * ~~store customer in db~~
-        * send notification
+        * ~~send notification~~
         * */
 
         customerRepository.saveAndFlush(customer);
