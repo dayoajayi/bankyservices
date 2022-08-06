@@ -24,14 +24,6 @@ public class CustomerService {
                 .email(request.email())
                 .build();
 
-        /*
-        * check if email valid
-        * check if email not taken
-        * ~~check if fraudster~~
-        * ~~store customer in db~~
-        * ~~send notification~~
-        * */
-
         customerRepository.saveAndFlush(customer);
         FraudCheckResponse fraudCheckResponse = fraudClient.isFraudster(customer.getId());
 
