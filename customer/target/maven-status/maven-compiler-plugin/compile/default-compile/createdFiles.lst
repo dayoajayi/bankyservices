@@ -1,0 +1,8 @@
+com/bankyconsulting/customer/CustomerService.class
+com/bankyconsulting/customer/CustomerConfig.class
+com/bankyconsulting/customer/CustomerRegistrationRequest.class
+com/bankyconsulting/customer/Customer.class
+com/bankyconsulting/customer/CustomerRepository.class
+com/bankyconsulting/customer/CustomerApplication.class
+com/bankyconsulting/customer/CustomerController.class
+com/bankyconsulting/customer/Customer$CustomerBuilder.class

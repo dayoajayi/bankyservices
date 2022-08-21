@@ -6,19 +6,17 @@ import com.bankyconsulting.clients.notification.NotificationClient;
 import com.bankyconsulting.clients.notification.NotificationRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 @AllArgsConstructor
 public class CustomerService {
 
     private final CustomerRepository customerRepository;
-    private final RestTemplate restTemplate;
     private final FraudClient fraudClient;
     private final NotificationClient notificationClient;
 
     public void registerCustomer(CustomerRegistrationRequest request) {
-        Customer customer =  Customer.builder()
+        Customer customer = Customer.builder()
                 .firstName(request.firstName())
                 .lastName(request.lastName())
                 .email(request.email())
@@ -27,7 +25,7 @@ public class CustomerService {
         customerRepository.saveAndFlush(customer);
         FraudCheckResponse fraudCheckResponse = fraudClient.isFraudster(customer.getId());
 
-        if (fraudCheckResponse.isFraudster()){
+        if (fraudCheckResponse.isFraudster()) {
             throw new IllegalStateException("Fraudster!");
         }
 

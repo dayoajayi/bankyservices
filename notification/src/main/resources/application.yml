@@ -7,7 +7,7 @@ spring:
   datasource:
     username: amigoscode
     password: password
-    url: jdbc:postgresql://localhost:5432/notification
+    url: jdbc:postgresql://localhost:5433/notification
   jpa:
     properties:
       hibernate:

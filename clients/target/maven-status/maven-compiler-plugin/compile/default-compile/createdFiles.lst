@@ -1,0 +1,4 @@
+com/bankyconsulting/clients/notification/NotificationRequest.class
+com/bankyconsulting/clients/fraud/FraudCheckResponse.class
+com/bankyconsulting/clients/notification/NotificationClient.class
+com/bankyconsulting/clients/fraud/FraudClient.class

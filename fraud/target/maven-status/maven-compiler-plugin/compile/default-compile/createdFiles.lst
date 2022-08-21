@@ -1,0 +1,6 @@
+com/bankyconsulting/fraud/FraudCheckService.class
+com/bankyconsulting/fraud/FraudCheckHistory$FraudCheckHistoryBuilder.class
+com/bankyconsulting/fraud/FraudCheckHistory.class
+com/bankyconsulting/fraud/FraudController.class
+com/bankyconsulting/fraud/FraudApplication.class
+com/bankyconsulting/fraud/FraudCheckHistoryRepository.class

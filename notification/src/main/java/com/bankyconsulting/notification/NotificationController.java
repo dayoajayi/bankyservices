@@ -6,16 +6,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @AllArgsConstructor
-@RequestMapping("api/v1/notification")
+@RequestMapping("/api/v1")
 @Slf4j
 public class NotificationController {
 
     private final NotificationService notificationService;
 
-    @PostMapping
+    @PostMapping("/notification")
     public void sendNotification(@RequestBody NotificationRequest notificationRequest) {
         log.info("New notification...{}", notificationRequest);
         notificationService.send(notificationRequest);
