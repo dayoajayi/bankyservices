@@ -1,5 +1,6 @@
 package com.bankyconsulting.customer;
 
+import com.bankyconsulting.amqp.RabbitMQMessageProducer;
 import com.bankyconsulting.clients.fraud.FraudCheckResponse;
 import com.bankyconsulting.clients.fraud.FraudClient;
 import com.bankyconsulting.clients.notification.NotificationClient;
@@ -13,7 +14,7 @@ public class CustomerService {
 
     private final CustomerRepository customerRepository;
     private final FraudClient fraudClient;
-    private final NotificationClient notificationClient;
+    private final RabbitMQMessageProducer rabbitMQMessageProducer;
 
     public void registerCustomer(CustomerRegistrationRequest request) {
         Customer customer = Customer.builder()
@@ -29,15 +30,17 @@ public class CustomerService {
             throw new IllegalStateException("Fraudster!");
         }
 
-        // todo: make it async. i.e. add to queue
-        notificationClient.sendNotification(
-                new NotificationRequest(
-                        customer.getId(),
-                        customer.getEmail(),
-                        String.format("Hi, %s, welcome to AmigosCode!",
-                                customer.getFirstName())
+        NotificationRequest notificationRequest = new NotificationRequest(
+                customer.getId(),
+                customer.getEmail(),
+                String.format("Hi, %s, welcome to AmigosCode!",
+                        customer.getFirstName())
 
-                )
+        );
+        rabbitMQMessageProducer.publish(
+                notificationRequest,
+                "internal.exchange",
+                 "internal.notification.routing-key"
         );
     }
 }
