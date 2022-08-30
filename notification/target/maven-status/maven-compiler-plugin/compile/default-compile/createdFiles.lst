@@ -3,5 +3,7 @@ com/bankyconsulting/notification/NotificationService.class
 com/bankyconsulting/notification/NotificationController.class
 com/bankyconsulting/notification/NotificationApplication.class
 com/bankyconsulting/notification/Notification.class
+com/bankyconsulting/notification/NotificationConfig.class
 com/bankyconsulting/notification/NotificationRequest.class
+com/bankyconsulting/notification/rabbitmq/NotificationConsumer.class
 com/bankyconsulting/notification/NotificationRespository.class

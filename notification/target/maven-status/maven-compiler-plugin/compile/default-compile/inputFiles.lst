@@ -1,6 +1,8 @@
 /Users/dajayi/workspace/bankyservices/notification/src/main/java/com/bankyconsulting/notification/NotificationService.java
+/Users/dajayi/workspace/bankyservices/notification/src/main/java/com/bankyconsulting/notification/NotificationConfig.java
 /Users/dajayi/workspace/bankyservices/notification/src/main/java/com/bankyconsulting/notification/Notification.java
 /Users/dajayi/workspace/bankyservices/notification/src/main/java/com/bankyconsulting/notification/NotificationRequest.java
+/Users/dajayi/workspace/bankyservices/notification/src/main/java/com/bankyconsulting/notification/rabbitmq/NotificationConsumer.java
 /Users/dajayi/workspace/bankyservices/notification/src/main/java/com/bankyconsulting/notification/NotificationApplication.java
 /Users/dajayi/workspace/bankyservices/notification/src/main/java/com/bankyconsulting/notification/NotificationRespository.java
 /Users/dajayi/workspace/bankyservices/notification/src/main/java/com/bankyconsulting/notification/NotificationController.java
